@@ -9,7 +9,7 @@ export async function createPost(formData: FormData) {
   if (!apiBaseUrl) {
     throw new Error('API base URL is not defined');
   }
-  const res = await fetch("http://localhost:3000/api/poems", {
+  const res = await fetch(apiBaseUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
