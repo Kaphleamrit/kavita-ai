@@ -18,9 +18,13 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL || '');
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+      if (!apiBaseUrl) {
+        console.error("API base URL is not defined");
+        return;
+      }
+      const response = await fetch(apiBaseUrl);
       const data = await response.json();
-      // handle data here
       setPosts(data);
       console.log(data);
     };
@@ -37,7 +41,7 @@ export default function Home() {
         </div>
       </div>
 
-          <InputForm />
+      <InputForm />
     </div>
   );
 }
