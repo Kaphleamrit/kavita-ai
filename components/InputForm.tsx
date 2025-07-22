@@ -7,7 +7,6 @@ export default function InputForm() {
       >
         Submit Your Writing
       </a>
-      {/* </div> */}
     </form>
   );
 }
