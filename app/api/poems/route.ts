@@ -7,6 +7,7 @@ export async function GET() {
   const poems = await prisma.poem.findMany({
     orderBy: { createdAt: 'desc' },
   });
+  console.log(poems);
   return NextResponse.json(poems);
 }
 
