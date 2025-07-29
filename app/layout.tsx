@@ -5,11 +5,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <header>
+        {/* <header>
           <nav>
             <Link href="/">Home</Link> | <Link href="/about">About</Link>
           </nav>
-        </header>
+        </header> */}
         <main>{children}</main>
       </body>
     </html>
