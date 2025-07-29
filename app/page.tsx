@@ -25,8 +25,7 @@ export default function Home() {
       const response = await fetch(apiBaseUrl);
       const data = await response.json();
       setPosts(data);
-      console.log(data);
-    };
+     };
     fetchData();
   }, []);
 
